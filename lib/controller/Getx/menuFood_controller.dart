@@ -7,7 +7,7 @@ import 'package:gizi_genius_app_update/views/pages/screens/listResepFoods.dart';
 class MenuFoodController extends GetxController with GetSingleTickerProviderStateMixin {
   late TabController tabController;
   final selectedItemPositions = 0.obs;
-  final pageItems = const [
+  final pageItems =  [
     ListFoods(),
     ListResepFoods(),
     ListFoodUsers()

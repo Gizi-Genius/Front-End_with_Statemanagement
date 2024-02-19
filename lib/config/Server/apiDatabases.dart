@@ -5,5 +5,6 @@ class Api{
   //User Authentication
   late final register = '${hostapi}auth/register';
   late final login = '${hostapi}auth/login';
+  late final listFoods = '${hostapi}makanan';
 
 }

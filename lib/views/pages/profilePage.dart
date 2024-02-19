@@ -43,7 +43,7 @@ class ProfilePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(40),
                               image: const  DecorationImage(
                                 image: AssetImage(
-                                  '../assets/images/vector.jpg',
+                                  'assets/images/vector.jpg',
                                 ),
                                 fit: BoxFit.contain,
                               )),
@@ -53,19 +53,23 @@ class ProfilePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            CustomeText(text: 'Maulana Khairuman', color: lightColor, size: 20, weight: fWBold,),
+                            CustomeText(text: 'Maulana Khairuman', color: lightColor, size: 17, weight: fWBold,),
                             CustomeText(text: 'maulanakhairuman2004@gmail.com', color: greyColor.withOpacity(0.8), size: 10,)
                           ],
                         ),
                       ],
                     ),
-                  ElevatedButton(
-                        style: const ButtonStyle(
-                            backgroundColor:
-                                MaterialStatePropertyAll(buttonColor)),
-                        onPressed: () {},
-                        child: const CustomeText(
-                            text: 'Edit Profile', color: lightColor))
+                SizedBox(
+                  width: 80,
+                  height: 27,
+                    child: ElevatedButton(
+                          style: const ButtonStyle(
+                              backgroundColor:
+                                  MaterialStatePropertyAll(buttonColor)),
+                          onPressed: () {},
+                          child: const CustomeText(
+                              text: 'Edit', color: lightColor, size: 15,)),
+                  )
                   ],
                 ),
               ),

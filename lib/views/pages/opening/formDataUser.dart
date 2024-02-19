@@ -5,7 +5,6 @@ import 'package:gizi_genius_app_update/animations/left.dart';
 import 'package:gizi_genius_app_update/animations/up.dart';
 import 'package:gizi_genius_app_update/themes/materialColors.dart';
 import 'package:gizi_genius_app_update/themes/materialFont.dart';
-import 'package:gizi_genius_app_update/views/navigation/mainHomePage.dart';
 import 'package:gizi_genius_app_update/widgets/customeButton.dart';
 import 'package:gizi_genius_app_update/widgets/customeText.dart';
 import 'package:gizi_genius_app_update/widgets/customeTextField.dart';

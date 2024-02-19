@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
+  enum Gender { male, female }
+class GenderController extends GetxController {
+  var selectedOption = ''.obs;
 
-class FDataUserController extends GetxController{
-  
+  void setSelectedOption(String option) {
+    selectedOption.value = option;
+  }
 }

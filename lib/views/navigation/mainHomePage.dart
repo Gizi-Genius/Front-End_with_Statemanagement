@@ -7,6 +7,7 @@ import 'package:gizi_genius_app_update/themes/materialColors.dart';
 class MainHomePage extends StatelessWidget {
   MainHomePage({super.key});
   final mainHomeC = Get.put(MainHomeController());
+  
 
   @override
   Widget build(BuildContext context) {

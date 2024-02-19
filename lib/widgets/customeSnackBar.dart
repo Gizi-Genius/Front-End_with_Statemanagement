@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:gizi_genius_app_update/themes/materialColors.dart';
 import 'package:gizi_genius_app_update/themes/materialFont.dart';
 
-void CustomeSnackbar(title, msg, type) {
+void CustomeSnackbar(title, msg, type, Duration duration) {
   Get.snackbar(
     title,
     msg,
@@ -12,8 +12,8 @@ void CustomeSnackbar(title, msg, type) {
     backgroundColor: type == "error"
         ? Colors.red.withOpacity(0.8)
         : (type == "success" ? Colors.green.withOpacity(0.8) :  mainColor.withOpacity(0.8)),
-        titleText: Text(title, style: fontUbuntu.copyWith(color: (type == 'error') ? lightColor : darkColor),),
-        duration: Duration( seconds: 1),
+        titleText: Text(title, style: fontUbuntu.copyWith(color: (type == 'error') ? lightColor : darkColor, fontWeight: fWBold),),
+        duration: duration,
 
   );
 }

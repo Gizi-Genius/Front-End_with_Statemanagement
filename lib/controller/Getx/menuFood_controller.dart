@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gizi_genius_app_update/views/pages/screens/listFoods.dart';
+import 'package:gizi_genius_app_update/views/pages/screens/listFoodsUser.dart';
 import 'package:gizi_genius_app_update/views/pages/screens/listResepFoods.dart';
 
 class MenuFoodController extends GetxController with GetSingleTickerProviderStateMixin {
@@ -9,10 +10,12 @@ class MenuFoodController extends GetxController with GetSingleTickerProviderStat
   final pageItems = const [
     ListFoods(),
     ListResepFoods(),
+    ListFoodUsers()
   ].obs;
   final iconTabBar = [
     Icons.food_bank,
     Icons.restaurant,
+    Icons.fastfood
   ].obs;
 
   @override

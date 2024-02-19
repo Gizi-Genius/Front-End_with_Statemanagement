@@ -33,13 +33,14 @@ class RegisterController extends GetxController {
     if (usernameC.text.isEmpty ||
         emailC.text.isEmpty ||
         passwordC.text.isEmpty) {
-      CustomeSnackbar('Error', 'All fields are required', 'error');
+      CustomeSnackbar('Error', 'All fields are required', 'error', const Duration(seconds: 2));
       return;
     }
     await Get.showOverlay(
         asyncFunction: () async => await registerAuthDb(),
         loadingWidget: const Loader());
     print('''
+
 ${usernameC.text},
 ${emailC.text}
 ${passwordC.text}
@@ -58,15 +59,15 @@ ${passwordC.text}
       if (response.statusCode == 200 || response.statusCode == 201) {
         var res = jsonDecode(response.body); // ubah json ke Objext/Array
         print(res);
-        CustomeSnackbar('Success', 'Akun Berhasil di Tambahkan', 'success');
+        CustomeSnackbar('Success', 'Akun Berhasil di Tambahkan', 'success', const Duration(seconds: 2));
         Get.offAllNamed('/login');
       } else {
         print('Gagal mendaftar: ${response.reasonPhrase}');
         CustomeSnackbar('error',
-            'Gagal mendaftar: ${response.body} dan coba lagi', 'error');
+            'Gagal mendaftar: ${response.body} dan coba lagi', 'error', const Duration(seconds: 2));
       }
     } catch (e) {
-      CustomeSnackbar('error', 'Error in $e', 'error');
+      CustomeSnackbar('error', 'Error in $e', 'error', const Duration(seconds: 2));
       print('error in the $e');
     }
   }

@@ -13,7 +13,6 @@ import '../../animations/up.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
   final loginC = Get.put(LoginController());
-  final passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -47,7 +46,7 @@ class LoginPage extends StatelessWidget {
                       const SizedBox(height: 4),
                       ContainerFormField(
                           form: CustomeFormField(
-                              controller: TextEditingController(),
+                              controller: loginC.emailC,
                               colorIcon: lightColor,
                               icon: Icons.email,
                               obscureText: false))
@@ -65,7 +64,7 @@ class LoginPage extends StatelessWidget {
                       ContainerFormField(
                         form: Obx(() {
                           return CustomeFormField(
-                            controller: passController,
+                            controller: loginC.passwordC,
                             colorIcon: lightColor,
                             icon: Icons.password_outlined,
                             obscureText: loginC.toggleShowPass.value,
@@ -89,11 +88,7 @@ class LoginPage extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Navigator.pushReplacement(
-                          //   context,
-                          //   MaterialPageRoute(builder: (context) => OpeningPage()),
-                          // );
-                          CustomeSnackbar('Done Bang', 'Nggak ada si', 'success');
+                          loginC.checkFormFieldLogin();
                         },
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 16),

@@ -8,7 +8,10 @@ class Loader extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Color.fromARGB(122, 58, 58, 58),
-      body: CircularProgressIndicator(color: mainColor,),
+      body: Center(
+          child: CircularProgressIndicator(
+        color: mainColor,
+      )),
     );
   }
 }

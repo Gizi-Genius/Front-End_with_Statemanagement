@@ -31,10 +31,18 @@ class ListFoods extends StatelessWidget {
                   )),
               const Divider(),
               const SizedBox(height: 16),
-              const UpAnimation(
+               UpAnimation(
                   delay: 3,
-                  child: CustometextField(
+                  child:  CustometextField(
                     text: 'Search...',
+                    styTextField: greyColor.withOpacity(0.8),
+                    borderSideColor: greyColor.withOpacity(0.8),
+                    hintTextColor: greyColor.withOpacity(0.8),
+                    iconprefix: Container(
+                      margin: const EdgeInsets.only(left: 15, right: 10),
+                      child:
+                          const Icon(CupertinoIcons.search, color: lightColor),
+                    ),
                   )),
               const SizedBox(height: 16),
               Expanded(
